@@ -21,9 +21,10 @@
 		}
 		//
 		//------------------------------------------
-		#xem doanh nghiệp
+		#xem thông tin trẻ em
 		public function select_treem(){
 			$p = new ketnoi();
+			$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
 			if($p -> moketnoi($conn)){
 				$string = "SELECT * FROM hosotreem";
 				$table = mysqli_query($conn,$string);
@@ -35,16 +36,16 @@
 		}
 		
 		#thêm thông tin trẻ em
-		public function add_treem($hoTen, $ngaySinh,$tinhTrang, $noiDungKetQua,$username){
+		public function add_treem($hoTen, $ngaySinh,$thaiKy,$tinhTrang, $noiDungKetQua,$username){
 			
 			$p = new ketnoi();
 			if($p->moketnoi($conn)){
 				if ($username !="") {
-					$string="insert into hosotreem(hoTen, ngaySinh, tinhTrang, noiDungKetQua, username) values";
-                	$string .= "('".$hoTen."','".$ngaySinh."','".$tinhTrang."','".$noiDungKetQua."','".$username."')";
+					$string="insert into hosotreem(hoTen, ngaySinh, thaiKy,tinhTrang, noiDungKetQua, username) values";
+                	$string .= "('".$hoTen."','".$ngaySinh."','".$thaiKy."','".$tinhTrang."','".$noiDungKetQua."','".$username."')";
 				}else {
-					$string="insert into hosotreem(hoTen, ngaySinh, tinhTrang, noiDungKetQua, username) values";
-                	$string .= "('".$hoTen."','".$ngaySinh."','".$tinhTrang."','".$noiDungKetQua."','".$username."')";
+					$string="insert into hosotreem(hoTen, ngaySinh,thaiKy ,tinhTrang, noiDungKetQua, username) values";
+                	$string .= "('".$hoTen."','".$ngaySinh."','".$thaiKy."','".$tinhTrang."','".$noiDungKetQua."','".$username."')";
 				}
 				
                 $table=mysqli_query($conn,$string);

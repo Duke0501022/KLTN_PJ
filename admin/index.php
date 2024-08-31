@@ -114,7 +114,7 @@ if ($_SESSION['Role'] == 1) {
         } elseif (isset($_REQUEST["addtreem"])) {
             include("view/TreEm/addTreEm.php");
         }elseif (isset($_REQUEST["deltreem"])) {
-            include("view/TreEm/deltreem.php");
+            include("view/TreEm/delTreEm.php");
         } elseif (isset($_REQUEST["qlluong"])) {
             include("view/Luong/listLuong.php");
         }
