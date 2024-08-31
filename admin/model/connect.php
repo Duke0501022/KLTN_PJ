@@ -3,7 +3,7 @@
 	class ketnoi{
 		public function moketnoi(&$conn){
 
-			$conn = mysqli_connect('localhost','root','','testdv1');
+			$conn = mysqli_connect('localhost','root','','kltn_pj');
 
 		
 			//set charset utf8

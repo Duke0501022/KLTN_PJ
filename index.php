@@ -129,6 +129,11 @@ if (isset($_REQUEST['logout'])) {
                         echo '<a href="index.php?tracnghiem" class="nav-item nav-link">Theo dõi phát triển</a>';
                     }
                     ?>
+                    <?php
+                    if (isset($_SESSION['LoginSuccess']) && $_SESSION['LoginSuccess'] == true) {
+                        echo '<a href="index.php?datlich" class="nav-item nav-link">Đặt lịch tư vấn cho bé </a>';
+                    }
+                    ?>
                     <div class="nav-item dropdown">
                         <?php
                         if (isset($_SESSION['LoginSuccess']) && $_SESSION['LoginSuccess'] == true) {
@@ -217,6 +222,8 @@ if (isset($_REQUEST['logout'])) {
         include('View/forgotpass.php');
     } else if (isset($_REQUEST['newpass'])) {
         include('View/newpass.php');
+    } else if (isset($_REQUEST['datlich'])) {
+        include('View/Datlich/vDatlich.php');
     } else {
         include('View/main.php');
     }

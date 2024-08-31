@@ -2,7 +2,7 @@
 	class clsketnoi{
 		public function ketnoiDB(&$conn){
 
-			$conn =  mysqli_connect('localhost', 'root', '', 'testdv1');
+			$conn =  mysqli_connect('localhost', 'root', '', 'kltn_pj');
 
 			
 			//set charset utf8

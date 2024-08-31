@@ -7,11 +7,9 @@ if (!isset($_SESSION['login_admin']) || !$_SESSION['login_admin']) {
     exit();
 }
 include_once("view/layouts/header.php");
-include_once("view/layouts/slidebar.php");
-
 
 if ($_SESSION['Role'] == 1) {
- 
+    include("view/layouts/slidebar.php");
     if (isset($_REQUEST["qlnv"])) {
         include("view/NhanVienPhanPhoi/quanlinhanvien.php");
     } elseif (isset($_REQUEST["qlkhdn"])) {
@@ -50,47 +48,14 @@ if ($_SESSION['Role'] == 1) {
         include("view/TaiKhoan/updatetaikhoan.php");
     } elseif (isset($_REQUEST["deletetk"])) {
         include("view/TaiKhoan/deletetaikhoan.php");
-    } elseif (isset($_REQUEST["quanliloaibaiviet"])) {
-        include("view/LoaiBaiViet/quanliloaibaiviet.php");
-    } elseif (isset($_REQUEST["dangbaiviet"])) {
-        include("view/LoaiBaiViet/dangbai.php");
-    } elseif (isset($_REQUEST["phanhoi"])) {
-        include("view/vPhanHoi.php");
-    } elseif (isset($_REQUEST["qlbt"])) {
-        include("view/CauHoi/quanlicauhoi.php");
-    } elseif (isset($_REQUEST["addcauhoi"])) {
-        include("view/CauHoi/addcauhoi.php");
-    } elseif (isset($_REQUEST["updatecauhoi"])) {
-        include("view/CauHoi/updatecauhoi.php");
-    }elseif (isset($_REQUEST["deletecauhoi"])) {
-      include("view/CauHoi/delcauhoi.php");
-    } elseif (isset($_REQUEST["import"])) {
-        include("view/Import/vImport.php");
-    }elseif (isset($_REQUEST["qltt"])) {
-        include("view/TinTuc/quanlitintuc.php");
+    }else{
+        include("view/pagelog.php");
     }
-    elseif (isset($_REQUEST["addtt"])) {
-        include("view/TinTuc/addtintuc.php");
-    }
-    elseif (isset($_REQUEST["updatett"])) {
-        include("view/TinTuc/updatetintuc.php");
-    }
-    elseif (isset($_REQUEST["deltintuc"])) {
-        include("view/TinTuc/deltintuc.php");
-    }
-    elseif (isset($_REQUEST["qlluong"])) {
-        include("view/Luong/listLuong.php");
-    }
-    elseif (isset($_REQUEST["tinhluong"])) {
-        include("view/Luong/tinhLuong.php");
-    }
-     else {
-        include_once("view/content.php");
-    }
+    
       #CHUYENVIEN
     }elseif ($_SESSION['Role'] == 3) {
         include_once("view/layouts/header.php");
-        include_once("view/layouts/slidebar.php");
+        include_once("view/layouts/slidebarcv.php");
         if (isset($_REQUEST["thongtin"])) {
             include("view/vProfile.php");
         } elseif (isset($_REQUEST["tuvan"])){
@@ -99,13 +64,22 @@ if ($_SESSION['Role'] == 1) {
             include_once("view/vTuVan.php");
         }elseif (isset($_REQUEST["dstest"])){
                 include_once("view/vLichSu.php");    
-        }else {
-            include_once("view/content.php");
+        }if (isset($_REQUEST["qlbt"])) {
+            include("view/CauHoi/quanlicauhoi.php");
+        } elseif (isset($_REQUEST["addcauhoi"])) {
+            include("view/CauHoi/addcauhoi.php");
+        }elseif (isset($_REQUEST["qltt"])) {
+            include("view/TinTuc/quanlitintuc.php");
+        }
+        elseif (isset($_REQUEST["addtt"])) {
+            include("view/TinTuc/addtintuc.php");
+        }else{
+            include("view/pagelog.php");
         }
         #QTV
     } elseif ($_SESSION['Role'] == 4) {
         include_once("view/layouts/header.php");
-        include_once("view/layouts/slidebar.php");
+        include_once("view/layouts/slidebarqtv.php");
         if (isset($_REQUEST["qlbt"])) {
             include("view/CauHoi/quanlicauhoi.php");
         } elseif (isset($_REQUEST["addcauhoi"])) {
@@ -141,13 +115,17 @@ if ($_SESSION['Role'] == 1) {
             include("view/TreEm/addTreEm.php");
         }elseif (isset($_REQUEST["deltreem"])) {
             include("view/TreEm/deltreem.php");
+        } elseif (isset($_REQUEST["qlluong"])) {
+            include("view/Luong/listLuong.php");
+        }
+        elseif (isset($_REQUEST["tinhluong"])) {
+            include("view/Luong/tinhLuong.php");
         }
 
         else {
             include_once("view/content.php");
         }
      }
-
 
 include_once("view/layouts/footer.php");
 ?>

@@ -21,7 +21,7 @@ class mTuvanTudong
 	// }
 	public function select_tuvan($query)
     {
-        $conn;
+      
         $p = new clsketnoi();
         if ($p->ketnoiDB($conn)) {
             $query_normalized = strtolower($this->convert_vi_to_en($query));
@@ -38,7 +38,7 @@ class mTuvanTudong
 	
 	public function select_message($username)
 	{
-		$conn;
+		
 		$p = new clsketnoi();
 		if ($p->ketnoiDB($conn)) {
 			$string = "SELECT * FROM message where username = '$username'";
@@ -77,7 +77,7 @@ class mTuvanTudong
 
 	public function insert_message($txt, $added_on, $user,$username = null)
 	{
-		$conn;
+		
 		$p = new clsketnoi();
 		if ($p->ketnoiDB($conn)) {
 			$escaped_txt = mysqli_real_escape_string($conn, $txt); // Tránh SQL injection

@@ -95,14 +95,7 @@
               </a>
 
             </li>
-            <li clas="nav-item">
-                <a href="?qlte" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Quản lý hồ sơ trẻ em</p>
-                </a>
-
-           
-          </li>
+        
             <!-- <li clas="nav-item">
               <a href="?qlttpp" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -126,13 +119,6 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-
-            <li class="nav-item">
-              <a href="?thongke" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Thống kê</p>
-              </a>
-            </li>
             <li class="nav-item">
               <a href="?chatbot" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -145,156 +131,13 @@
                 <p>Thông tin tài khoản</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="?hotro" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Trợ giúp</p>
-              </a>
-            </li>
-          
-
-          </ul>
-        </li>
-
-        <!-- Phân quyền + thống kê báo cáo -->
-
-
-         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Thông tin liên hệ
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">1</span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="index.php?phanhoi" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Phản hồi</p>
-              </a>
-            </li>
            
-
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Tư vấn phụ huynh
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">1</span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="index.php?tuvan" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Danh sách phụ huynh</p>
-              </a>
-            </li>
-           
-
-          </ul>
-        </li>
-
-    
-
-        <!-- Duyệt Bài đăng   -->
           
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Quản lí bài test
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">2</span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="?qlbt" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Danh mục câu hỏi</p>
-              </a>
-            </li>
 
           </ul>
-          
         </li>
-        
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Quản lí Lương
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">2</span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="?qlluong" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Danh sách lương</p>
-              </a>
-            </li>
 
-          </ul>
-          
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Quản lí tin tức
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">2</span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="?qltt" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Danh mục </p>
-              </a>
-            </li>
-
-          </ul>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="?duyett" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Duyệt tin tức</p>
-              </a>
-            </li>
-
-          </ul>
-          
-        </li>
-        
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Lịch sử kiểm tra phụ huynh
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">2</span>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="?dstest" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Danh sách </p>
-              </a>
-            </li>
-
-          </ul>
-          
-        </li>
+      
         
         <!-- Duyệt bài đăng -->
       </ul>
