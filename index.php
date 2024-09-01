@@ -151,7 +151,11 @@ if (isset($_REQUEST['logout'])) {
                             ?>
                         </div>
                     </div>
-                    
+                    <?php
+                    if (isset($_SESSION['LoginSuccess']) && $_SESSION['LoginSuccess'] == true) {
+                        echo '<a href="index.php?hosotreem" class="nav-item nav-link">Hồ sơ trẻ em</a>';
+                    }
+                    ?>
                     <a href="index.php?tintuc" class="nav-item nav-link">Tin tức</a>
                     <a href="index.php?lienhe" class="nav-item nav-link">Liên hệ</a>
                 </div>
@@ -224,7 +228,12 @@ if (isset($_REQUEST['logout'])) {
         include('View/newpass.php');
     } else if (isset($_REQUEST['datlich'])) {
         include('View/Datlich/vDatlich.php');
-    } else {
+    }else if (isset($_REQUEST['hosotreem'])) {
+        include('View/TreEm/quanlyhosotreem.php');
+    }else if (isset($_REQUEST['addTreEm'])) {
+        include('View/TreEm/addTreEm.php');
+    }
+     else {
         include('View/main.php');
     }
 

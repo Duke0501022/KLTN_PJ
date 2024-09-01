@@ -54,7 +54,7 @@ if ($_SESSION['Role'] == 1) {
     
       #CHUYENVIEN
     }elseif ($_SESSION['Role'] == 3) {
-        include_once("view/layouts/header.php");
+       
         include_once("view/layouts/slidebarcv.php");
         if (isset($_REQUEST["thongtin"])) {
             include("view/vProfile.php");
@@ -78,7 +78,7 @@ if ($_SESSION['Role'] == 1) {
         }
         #QTV
     } elseif ($_SESSION['Role'] == 4) {
-        include_once("view/layouts/header.php");
+        
         include_once("view/layouts/slidebarqtv.php");
         if (isset($_REQUEST["qlbt"])) {
             include("view/CauHoi/quanlicauhoi.php");
@@ -120,6 +120,10 @@ if ($_SESSION['Role'] == 1) {
         }
         elseif (isset($_REQUEST["tinhluong"])) {
             include("view/Luong/tinhLuong.php");
+        }elseif (isset($_REQUEST["qlgd"])) {
+            include("view/LichDay/quanlilichday.php");
+        }elseif (isset($_REQUEST["addgd"])) {
+            include("view/LichDay/addlichday.php");
         }
 
         else {

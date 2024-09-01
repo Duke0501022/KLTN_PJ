@@ -6,7 +6,8 @@ $roleNames = array(
   1 => 'admin',
   2 => 'phuhuynh',
   3 => 'chuyenvien',
-  4 => 'quantrivien'
+  4 => 'quantrivien',
+  5 => 'giaovien'
 );
 
 $roleMap = array_flip($roleNames); // Create a reverse mapping array
@@ -92,7 +93,7 @@ if (isset($_POST['search_role']) && $_POST['search_role'] != '') {
                                     <?php
                                     if ($table) {
                                         $stt = 1;
-                                        $roleNames = array(1 => 'admin', 2 => 'phuhuynh', 3 => 'chuyenvien', 4 => 'quantrivien');
+                                        $roleNames = array(1 => 'admin', 2 => 'phuhuynh', 3 => 'chuyenvien', 4 => 'quantrivien', 5 => 'giaovien');
                                         if (mysqli_num_rows($table) > 0) {
                                             while ($row = mysqli_fetch_assoc($table)) {
                                                 echo "<tr class='pagination-row'>";

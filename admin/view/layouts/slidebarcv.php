@@ -67,14 +67,29 @@
   
   
     <!-- Phân Quyền + Thống kê báo cáo -->
+      
+            <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              Thông tin
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">1</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
           <li class="nav-item">
               <a href="?thongtin" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Thông tin tài khoản</p>
               </a>
             </li>
- 
+           
 
+          </ul>
+        </li>
+ 
+        
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
@@ -140,7 +155,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
-              Lịch sử kiểm tra phụ huynh
+              Lịch sử kiểm tra của trẻ
               <i class="fas fa-angle-left right"></i>
               <span class="badge badge-info right">2</span>
             </p>
@@ -150,6 +165,26 @@
               <a href="?dstest" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Danh sách </p>
+              </a>
+            </li>
+
+          </ul>
+          
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+               Lịch làm việc
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="?lichday" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lịch dạy theo tuần </p>
               </a>
             </li>
 

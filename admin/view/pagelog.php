@@ -37,7 +37,8 @@
                        
                     <div class="card-body">
                     <video autoplay loop muted>
-        <source src="https://videos.pexels.com/video-files/12308007_1080_1080_30fps.mp4" type="video/mp4">
+        <source src="/admin/12308007_1080_1080_30fps.mp4" type="video/mp4">
+        <source src="/admin/12308007_1080_1080_30fps.webM" type="video/webm">
         Your browser does not support the video tag.
     </video>
    

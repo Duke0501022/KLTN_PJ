@@ -74,7 +74,7 @@ $result = $info->select_info($username);
 }
 
     </style>
-
+<div><br></div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

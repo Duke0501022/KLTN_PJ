@@ -113,22 +113,30 @@ class mLichDay
     }
 
     function InsertMenuDetails($idLichGD, $idGiaoVien)
-    {
-        $p = new ketnoi();
-        if ($p->moketnoi($conn)) {
-            $string = "INSERT INTO chitietgiangday (idLichGD, idGiaoVien) VALUES ";
-            foreach ($idGiaoVien as $item) {
-                $string .= "('$idLichGD', '$item'), ";
-            }
-            $string = rtrim($string, ", ");
-            $kq = mysqli_query($conn, $string);
-            $p->dongketnoi($conn);
-            return $kq;
-        } else {
-            return false;
-        }
+{
+    $p = new ketnoi();
+    $connect = $p->moketnoi($conn);
+
+    // Kiểm tra nếu idLichGD tồn tại trong lichgiangday
+    $checkLichGD = "SELECT COUNT(*) FROM lichgiangday WHERE idLichGD = '$idLichGD'";
+    $result = mysqli_query($connect, $checkLichGD);
+    $count = mysqli_fetch_array($result)[0];
+
+    if ($count == 0) {
+        $p->dongketnoi($connect);
+        return false; // Trả về false nếu không tồn tại
     }
 
+    $insert = "INSERT INTO chitietgiangday (idLichGD, idGiaoVien) VALUES ";
+    foreach ($idGiaoVien as $item) {
+        $insert .= "('$idLichGD', '$item'), ";
+    }
+    $insert = rtrim($insert, ", ");
+    $kq = mysqli_query($connect, $insert);
+
+    $p->dongketnoi($connect);
+    return $kq;
+}
     function InsertMenu($ngayTao)
     {
         $p = new ketnoi();
@@ -146,7 +154,7 @@ class mLichDay
     {
         $p = new ketnoi();
         if ($p->moketnoi($conn)) {
-            $string = "DELETE FROM chitietgiangday WHERE idLichGD = $idLichGD AND idGiaoVien = $idGiaoVien";
+            $string = "DELETE FROM chitietgiangday WHERE idLichGD = $idLichGD AND idGiaoVien = $idGiaoVien ";
             $kq = mysqli_query($conn, $string);
             $p->dongketnoi($conn);
             return $kq;
